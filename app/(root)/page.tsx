@@ -1,13 +1,17 @@
-// import HeaderBox from '@/components/HeaderBox'
 // import RecentTransactions from '@/components/RecentTransactions';
-// import RightSidebar from '@/components/RightSidebar';
-// import TotalBalanceBox from '@/components/TotalBalanceBox';
+import RightSidebar from '@/components/RightSidebar';
+import TotalBalanceBox from '@/components/TotalBalanceBox';
 // import { getAccount, getAccounts } from '@/lib/actions/bank.actions';
 // import { getLoggedInUser } from '@/lib/actions/user.actions';
 
-const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
-  const currentPage = Number(page as string) || 1;
+import HeaderBox from "@/components/HeaderBox"
+
+const Home = async (
+    // { searchParams: { id, page } }: SearchParamProps
+) => {
+//   const currentPage = Number(page as string) || 1;
 //   const loggedIn = await getLoggedInUser();
+  const loggedIn = {firstName:'Adam', lastName:'Smith', email:'adam@example.com'}
 //   const accounts = await getAccounts({ 
 //     userId: loggedIn.$id 
 //   })
@@ -22,20 +26,20 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   return (
     <section className="home">
       <div className="home-content">
-        {/* <header className="home-header">
+        <header className="home-header">
           <HeaderBox 
             type="greeting"
             title="Welcome"
             user={loggedIn?.firstName || 'Guest'}
             subtext="Access and manage your account and transactions efficiently."
-          /> */}
+          />
 
-          {/* <TotalBalanceBox 
-            accounts={accountsData}
-            totalBanks={accounts?.totalBanks}
-            totalCurrentBalance={accounts?.totalCurrentBalance}
-          /> */}
-        {/* </header> */}
+          <TotalBalanceBox 
+            accounts={[]}
+            totalBanks={1}
+            totalCurrentBalance={1356.98}
+          />
+        </header>
 
         {/* <RecentTransactions 
           accounts={accountsData}
@@ -44,12 +48,13 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
           page={currentPage}
         /> */}
       </div>
-
-      {/* <RightSidebar 
+     
+      <RightSidebar 
         user={loggedIn}
-        transactions={account?.transactions}
-        banks={accountsData?.slice(0, 2)}
-      /> */}
+        // transactions={account?.transactions}
+        // banks={accountsData?.slice(0, 2)}
+        banks={[{},{}]}
+      />
     </section>
   )
 }
