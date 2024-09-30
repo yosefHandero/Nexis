@@ -47,7 +47,7 @@ const config = {
         blue: {
           25: "#F5FAFF",
           100: "#D1E9FF",
-          500: "#2E90FA",
+          500: "#2E95FA",
           600: "#1570EF",
           700: "#175CD3",
           900: "#194185",
@@ -70,10 +70,10 @@ const config = {
         },
       },
       backgroundImage: {
-        "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
-        "gradient-mesh": "url('/icons/gradient-mesh.svg')",
+        "bank-gradient": "linear-gradient(45deg, #0129FE 10%, #4893FF 100%)",
+        "gradient-mesh": "url('/icons/rightsidebarcard.svg')",
         "bank-green-gradient":
-          "linear-gradient(90deg, #01797A 0%, #489399 100%)",
+          "linear-gradient(90deg, #01797A 0%, #489399 10%)",
       },
       boxShadow: {
         form: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",

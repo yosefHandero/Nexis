@@ -15,11 +15,11 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
     datasets: [
       {
         label: 'Banks',
-        data: [1423,1089,2981],
-        backgroundColor: ['#0747b6', '#2265d8', '#2f91fa'] 
+        data: balances,
+        backgroundColor: ['#0737b6', '#2235d8', '#2f01fa'] 
       }
     ],
-    labels: ['Bank 1', 'Bank 2', 'Bank 3']
+    labels: accountNames
   }
 
   return <Doughnut 

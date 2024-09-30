@@ -130,7 +130,7 @@ export const transactionCategoryStyles = {
   },
   default: {
     borderColor: "",
-    backgroundColor: "bg-blue-500",
+    backgroundColor: "bg-blue-800",
     textColor: "text-blue-700",
     chipBackgroundColor: "bg-inherit",
   },

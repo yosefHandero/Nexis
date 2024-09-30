@@ -2,7 +2,7 @@ import React from 'react'
 import { FormControl, FormField, FormLabel, FormMessage } from './ui/form'
 import { Input } from './ui/input'
 
-import { Control, FieldPathByValue } from 'react-hook-form'
+import { Control, FieldPath } from 'react-hook-form'
 import { z } from 'zod'
 import { authFormSchema } from '@/lib/utils'
 
@@ -10,7 +10,7 @@ const formSchema = authFormSchema('sign-up')
 
 interface CustomInput {
   control: Control<z.infer<typeof formSchema>>,
-  name: keyof z.infer<typeof formSchema>, // Use keyof the inferred schema
+  name: FieldPath<z.infer<typeof formSchema>>,
   label: string,
   placeholder: string
 }
@@ -19,8 +19,7 @@ const CustomInput = ({ control, name, label, placeholder }: CustomInput) => {
   return (
     <FormField
       control={control}
-            name={name as FieldPathByValue<z.infer<typeof formSchema>, string>} // Use FieldPathByValue for better typing
-
+      name={name}
       render={({ field }) => (
         <div className="form-item">
           <FormLabel className="form-label">

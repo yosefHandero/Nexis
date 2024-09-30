@@ -1,3 +1,4 @@
+
 export const dynamic = 'force-dynamic'
 
 import type { Metadata } from "next";
@@ -12,8 +13,8 @@ const ibmPlexSerif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Nexis",
-  description: "Nexis is your hub for seamless banking.",
+  title: "XYZ",
+  description: "XYZ is a modern banking platform for everyone.",
   icons: {
     icon: '/icons/logo.svg'
   }
